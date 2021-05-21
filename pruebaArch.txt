@@ -1,0 +1,3 @@
+/home/javier/Dropbox/Colegio/2019/Vacas Junio/Estructuras de datos/Proyecto_2/ColineAirport/ArchivosDeEntrada/Destinos.csv
+/home/javier/Dropbox/Colegio/2019/Vacas Junio/Estructuras de datos/Proyecto_2/ColineAirport/ArchivosDeEntrada/Rutas.csv
+/home/javier/Dropbox/Colegio/2019/Vacas Junio/Estructuras de datos/Proyecto_2/ColineAirport/ArchivosDeEntrada/Reservas.csv

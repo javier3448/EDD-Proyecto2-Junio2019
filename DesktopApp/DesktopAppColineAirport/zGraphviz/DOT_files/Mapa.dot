@@ -1,0 +1,15 @@
+digraph matrixGrafo{
+style = invis;
+
+edge[dir=none];
+
+layout=fdp;
+_Guatemala7720[label=" Guatemala"];
+_El_Salvador7721[label=" El Salvador"];
+_El_Salvador7721->_Guatemala7720;
+_Honduras7722[label=" Honduras"];
+_Honduras7722->_Guatemala7720;
+_Nicaragua7723[label=" Nicaragua"];
+_Nicaragua7723->_El_Salvador7721;
+_Panama7724[label=" Panama"];
+}

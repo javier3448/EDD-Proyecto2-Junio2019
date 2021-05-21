@@ -1,0 +1,13 @@
+digraph HashT{
+node[shape = record]
+rankdir = LR
+someNode[label = "0|<1>1\nid: 1\nCosto: 0.0\nTiempo: 0\nAlejandra|2|3|4|<0>5\nid: 0\nCosto: 0.0\nTiempo: 0\nRocael|6"];
+_Honduras1[label=" Honduras"];
+_Guatemala1[label=" Guatemala"];
+_El_Salvador0[label=" El Salvador"];
+_Guatemala0[label=" Guatemala"];
+
+someNode:1->_Honduras1->_Guatemala1;
+someNode:0->_El_Salvador0->_Guatemala0;
+
+}

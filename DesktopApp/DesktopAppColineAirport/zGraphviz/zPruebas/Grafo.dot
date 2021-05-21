@@ -1,0 +1,22 @@
+digraph HashT{
+node[shape = record]
+rankdir = LR
+someNode[label = "<3>0\nid: 3\nCosto: 0.0\nTiempo: 0\nHOpZ6RIvmh|<0>1\nid: 0\nCosto: 0.0\nTiempo: 0\n3ED8xfQJvR|2|3|<4>4\nid: 4\nCosto: 0.0\nTiempo: 0\njZOUB6fPXI|5|<2>6\nid: 2\nCosto: 0.0\nTiempo: 0\niQjJaHDmrF|7|8|9|<1>10\nid: 1\nCosto: 0.0\nTiempo: 0\nwqVY8QAXzb"];
+Belice3[label="Belice"];
+Canada3[label="Canada"];
+Belice0[label="Belice"];
+Canada0[label="Canada"];
+Belice4[label="Belice"];
+Canada4[label="Canada"];
+Belice2[label="Belice"];
+Canada2[label="Canada"];
+Belice1[label="Belice"];
+Canada1[label="Canada"];
+
+someNode:3->Belice3->Canada3;
+someNode:0->Belice0->Canada0;
+someNode:4->Belice4->Canada4;
+someNode:2->Belice2->Canada2;
+someNode:1->Belice1->Canada1;
+
+}

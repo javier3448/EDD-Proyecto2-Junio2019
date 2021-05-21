@@ -1,0 +1,87 @@
+digraph matrixBTree{
+subgraph clusterMatrix{
+style = invis;
+
+node[shape = box];
+
+mt[ label = "Mt", width = 1.5, style = invis, fillcolor = firebrick1, group = -1 ];
+C3[label="3"group = 3];
+C3->V33_3;
+C5[label="5"group = 5];
+C5->V21_5;
+R21[label="21"group = -1];
+R21->V21_5;
+V21_5[label="Q.5.0\nh: 21\nP: encriptado"group=5];
+{rank=same R21;V21_5;}
+C21[label="21"group = 21];
+C21->V46_21;
+R33[label="33"group = -1];
+R33->V33_3;
+V33_3[label="Q.3.0\nh: 33\nP: encriptado"group=3];
+{rank=same R33;V33_3;}
+C33[label="33"group = 33];
+C33->V69_33;
+R46[label="46"group = -1];
+R46->V46_21;
+V46_21[label="Q.21.0\nh: 46\nP: encriptado"group=21];
+V46_21->V75_21;
+{rank=same R46;V46_21;}
+C46[label="46"group = 46];
+C46->V75_46;
+R69[label="69"group = -1];
+R69->V69_33;
+V69_33[label="Q.33.0\nh: 69\nP: encriptado"group=33];
+V69_33->V89_33;
+{rank=same R69;V69_33;}
+R75[label="75"group = -1];
+R75->V75_21;
+V75_21[label="Q.21.0\nh: 75\nP: encriptado"group=21];
+V75_21->V75_46;
+V75_46[label="Q.46.0\nh: 75\nP: encriptado"group=46];
+V75_46->V89_46;
+{rank=same R75;V75_21;V75_46;}
+R89[label="89"group = -1];
+R89->V89_33;
+V89_33[label="Q.33.0\nh: 89\nP: encriptado"group=33];
+V89_33->V89_46;
+V89_46[label="Q.46.0\nh: 89\nP: encriptado"group=46];
+{rank=same R89;V89_33;V89_46;}
+mt->R21->R33->R46->R69->R75->R89[style=invis];
+mt->C3->C5->C21->C33->C46[style=invis];
+{rank = same mt;C3;C5;C21;C33;C46;}
+}
+subgraph clustercolBTree{
+node[shape = record];
+style=invis;
+colpage21:3->colpage3
+colpage3[label = "|<3>3||<5>5|"]
+colpage21:33->colpage33
+colpage33[label = "|<33>33||<46>46|"]
+colpage21:75->colpage75
+colpage75[label = "|<75>75||<89>89|"]
+colpage21[label = "<3>|<21>21|<33>|<69>69|<75>"]
+}
+subgraph clusterrowBTree{
+node[shape = record];
+style=invis;
+rowpage21:3->rowpage3
+rowpage3[label = "|<3>3||<5>5|"]
+rowpage21:33->rowpage33
+rowpage33[label = "|<33>33||<46>46|"]
+rowpage21:75->rowpage75
+rowpage75[label = "|<75>75||<89>89|"]
+rowpage21[label = "<3>|<21>21|<33>|<69>69|<75>"]
+}
+edge[dir = none]
+colpage3:3->C3[constraint=true];
+colpage3:5->C5[constraint=true];
+rowpage21:21->R21[constraint=false];
+colpage21:21->C21[constraint=true];
+rowpage33:33->R33[constraint=true];
+colpage33:33->C33[constraint=true];
+rowpage33:46->R46[constraint=false];
+colpage33:46->C46[constraint=true];
+rowpage21:69->R69[constraint=true];
+rowpage75:75->R75[constraint=false];
+rowpage75:89->R89[constraint=false];
+}

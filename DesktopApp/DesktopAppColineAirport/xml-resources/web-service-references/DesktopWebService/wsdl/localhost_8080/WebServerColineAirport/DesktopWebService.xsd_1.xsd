@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Desktop/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Desktop/">
+
+<xs:element name="addDestino" type="tns:addDestino"/>
+
+<xs:element name="addDestinoResponse" type="tns:addDestinoResponse"/>
+
+<xs:element name="addReserva" type="tns:addReserva"/>
+
+<xs:element name="addReservaResponse" type="tns:addReservaResponse"/>
+
+<xs:element name="addRuta" type="tns:addRuta"/>
+
+<xs:element name="addRutaResponse" type="tns:addRutaResponse"/>
+
+<xs:element name="getDotDestinos" type="tns:getDotDestinos"/>
+
+<xs:element name="getDotDestinosResponse" type="tns:getDotDestinosResponse"/>
+
+<xs:element name="getDotMapa" type="tns:getDotMapa"/>
+
+<xs:element name="getDotMapaResponse" type="tns:getDotMapaResponse"/>
+
+<xs:element name="getDotReservas" type="tns:getDotReservas"/>
+
+<xs:element name="getDotReservasResponse" type="tns:getDotReservasResponse"/>
+
+<xs:element name="getDotRutas" type="tns:getDotRutas"/>
+
+<xs:element name="getDotRutasResponse" type="tns:getDotRutasResponse"/>
+
+<xs:element name="getPaths" type="tns:getPaths"/>
+
+<xs:element name="getPathsResponse" type="tns:getPathsResponse"/>
+
+<xs:element name="getReservasCliente" type="tns:getReservasCliente"/>
+
+<xs:element name="getReservasClienteResponse" type="tns:getReservasClienteResponse"/>
+
+<xs:element name="getStringDestinos" type="tns:getStringDestinos"/>
+
+<xs:element name="getStringDestinosResponse" type="tns:getStringDestinosResponse"/>
+
+<xs:element name="getStringDestinosRutas" type="tns:getStringDestinosRutas"/>
+
+<xs:element name="getStringDestinosRutasResponse" type="tns:getStringDestinosRutasResponse"/>
+
+<xs:element name="getStringRutasReservas" type="tns:getStringRutasReservas"/>
+
+<xs:element name="getStringRutasReservasResponse" type="tns:getStringRutasReservasResponse"/>
+
+<xs:element name="getVermanKey" type="tns:getVermanKey"/>
+
+<xs:element name="getVermanKeyResponse" type="tns:getVermanKeyResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="removeReserva" type="tns:removeReserva"/>
+
+<xs:element name="removeReservaResponse" type="tns:removeReservaResponse"/>
+
+<xs:element name="removeRuta" type="tns:removeRuta"/>
+
+<xs:element name="removeRutaResponse" type="tns:removeRutaResponse"/>
+
+<xs:complexType name="getVermanKey">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getVermanKeyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPaths">
+<xs:sequence>
+<xs:element name="startKey" type="xs:int"/>
+<xs:element name="endKey" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPathsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeRuta">
+<xs:sequence>
+<xs:element name="keyRow" type="xs:int"/>
+<xs:element name="keyCol" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeRutaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDotRutas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getDotRutasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDotDestinos">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getDotDestinosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStringDestinosRutas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getStringDestinosRutasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addRuta">
+<xs:sequence>
+<xs:element name="keyRow" type="xs:int"/>
+<xs:element name="keyColumn" type="xs:int"/>
+<xs:element name="costo" type="xs:double"/>
+<xs:element name="minutes" type="xs:int"/>
+<xs:element name="piloto" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addRutaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStringDestinos">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getStringDestinosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getReservasCliente">
+<xs:sequence>
+<xs:element name="cliente" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getReservasClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDotReservas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getDotReservasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeReserva">
+<xs:sequence>
+<xs:element name="cliente" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeReservaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStringRutasReservas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getStringRutasReservasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDotMapa">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getDotMapaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addReserva">
+<xs:sequence>
+<xs:element name="cliente" type="xs:string" minOccurs="0"/>
+<xs:element name="stringDestinos" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addReservaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDestino">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDestinoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
